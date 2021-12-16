@@ -46,3 +46,13 @@ def scale(n):
         [0, 0, n, 0],
         [0, 0, 0, 1]
     ])
+
+def generate_3D_sky():
+    a = np.random.sample((3000, 4))
+    r = 1
+    for i in range(len(a)):
+        a[i][2] = (a[i][2] * 2 - 1)*r
+        a[i][1] = (r**2 - a[i][2]**2)**0.5 * np.sin(a[i][0] * 2*np.pi)
+        a[i][0] = (r**2 - a[i][2]**2)**0.5 * np.cos(a[i][0] * 2*np.pi)
+        a[i][3] = 1
+    return a

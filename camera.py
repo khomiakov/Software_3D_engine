@@ -35,7 +35,7 @@ class Camera:
         if key[pg.K_RIGHT]:
             self.camera_yaw(self.rotation_speed)
         if key[pg.K_UP]:
-            self.camera_pitch(-self.rotation_speed)
+            self.camera_pitch(-self.rotation_speed) 
         if key[pg.K_DOWN]:
             self.camera_pitch(self.rotation_speed)
 
